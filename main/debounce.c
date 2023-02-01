@@ -1,9 +1,8 @@
 /*
  * debounce.c 
  *
- * Software-based pushbutton/switch debounce for ESP32. Assumes that the pushbutton is connected to ground and enables
- * the internal pullup resistor prevent input from floating.
-GPIO pin can be configured in menuconfig (default is GPIO1).
+ * Software-based pushbutton/switch debounce for ESP32. GPIO pin can be configured in menuconfig (default is GPIO1). 
+ * Assumes that the pushbutton is connected to ground and enables the internal pullup resistor to prevent the input from floating.
  * 
  * Author: Michael Naish
  *
@@ -52,7 +51,6 @@ static void button_init(void)
    ESP_ERROR_CHECK(gpio_install_isr_service(ESP_INTR_FLAG_LEVEL1));          // allocate interrupt with lowest priority
    ESP_ERROR_CHECK(gpio_isr_handler_add(GPIO_BUTTON, button_handler, NULL)); // setup ISR for button 
 }
-
 
 void app_main(void)
 {
