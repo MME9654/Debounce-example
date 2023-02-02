@@ -12,8 +12,12 @@ Before project configuration and build, be sure to set the correct chip target u
 
 * A development board with any Espressif SoC (e.g., ESP32-DevKitC, ESP-WROVER-KIT, etc.)
 * A USB cable for microcontroller power supply and programming
+* A solderless breadboard
 * A SPST-NO pushbutton
 * Some jumper wires to connect pushbutton to GPIO
+
+Example schematic, for ESP32-S3-DEVKITC-1 with pushbutton connected to GPIO1 :
+![button_debounce](debounce_schematic.png)
 
 ### Build and Flash
 
